@@ -605,7 +605,7 @@ if game.PlaceId == 12802235086 then
 				local tween =  game:GetService("TweenService"):Create(game.Players.LocalPlayer.Character.HumanoidRootPart, TweenInfo.new(Time), {CFrame = CFrameEnd})
 				tween:Play()
 				tween.Completed:Wait()
-				wait(1)
+				wait(1) 
 			end
 			if tpButtons then
 				local CFrameEnd = CFrame.new(game:GetService("Workspace").APMapExpansion.UpgradePPMAP.Position)* CFrame.new(0,5,0)
