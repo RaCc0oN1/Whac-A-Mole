@@ -1,65 +1,69 @@
-:root {
-  --color: #001e5e;
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 
-body {
-  margin: 0;
-  padding: 0;
-  color: var(--color);
-  font-family: sans-serif;
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #3cff00, #ae00ff);
 }
 
-* {
-  box-sizing: border-box;
+.container{
+    padding: 40px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
-.container {
-  padding: 40px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+.board{
+    width: 450px;
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.board {
-  width: 450px;
-  display: flex;
-  flex-wrap: wrap;
+.box{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    align-content: center;
+    align-items: center;
+    border: solid 1px black;
+    background: #3ed73b2c;
+    background-image: url(img/mole-hidden.png);
+    background-size: cover;
 }
 
-.box {
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: solid 1px var(--color);
-  background-image: url("mole-hidden.png");
-  background-size: cover;
+#restart{
+    padding: 10px 20px;
+    color: white;
+    background-color: rebeccapurple;
+    border-color: black;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
-.mole {
-  background-image: url("mole.png");
-  background-size: cover;
+#restart:hover{
+    transform:  translateY(-2px);
 }
 
-#restart {
-  padding: 10px 20px;
-  color: white;
-  background-color: var(--color);
-  border-color: var(--color);
-  border-radius: 5px;
-  font-size: 1rem;
-
-  transition: 200ms;
+.mole{
+    background-image: url(img/mole.png);
+    background-size: cover;
 }
 
-#restart:hover {
-  transform: translateY(-5px);
+h2{
+    color: white;
+    font-weight: 600;
+    margin: 10px;
+    font-size: 2em;
 }
 
-/*-------*/
 .form_radio_btn {
     display: inline-block;
     margin-right: 10px;
@@ -89,4 +93,21 @@ body {
 .form_radio_btn input[type=radio]:disabled + label {
     background: #efefef;
     color: #666;
+}
+
+#input_time{
+    display: block;
+    width: 215px;
+    height: calc(2.25rem + 2px);
+    padding: 0.375rem 0.75rem;
+    font-family: inherit;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #bdbdbd;
+    border-radius: 0.25rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
